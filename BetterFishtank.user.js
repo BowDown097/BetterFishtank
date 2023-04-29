@@ -69,7 +69,7 @@ document.arrive(".Chat_chat__Bdojy", function(chatDiv) {
                 document.unbindArrive(".LiveStreamsControls_controls__w8C5J");
                 restoreChatBtn.remove();
             };
-            restoreChatBtn.style = "position: absolute; top: 0; right: 48px; margin: 8px";
+            restoreChatBtn.style = "position: absolute; top: 0; right: 48px; margin: 8px; pointer-events: auto";
 
             controls.appendChild(restoreChatBtn);
         });
