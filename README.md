@@ -6,3 +6,4 @@ A userscript that makes fishtank.live suck less.
 - Chat collapsing
 - Fullscreen button
 - Keyboard camera navigation with numbers and arrows
+- Season pass toast auto dismiss
