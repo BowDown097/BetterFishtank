@@ -3,7 +3,7 @@
 // @namespace   Violentmonkey Scripts
 // @match       *://*.fishtank.live/*
 // @grant       none
-// @version     1.0
+// @version     1.1
 // @author      BowDown097
 // @homepageURL https://github.com/BowDown097/BetterFishtank
 // @description Improvements to the fishtank.live website.
@@ -22,20 +22,6 @@ function createIconButton(svg) {
     restoreChatBtn.appendChild(restoreChatIcon);
 
     return restoreChatBtn;
-}
-
-function moveStream(up) {
-    const list = document.querySelector(".LiveStreamsList_live-streams-list___Dfsg");
-    const selected = document.querySelector(".LiveStreamsListItem_selected__3g9Y8");
-    if (!list || !selected)
-        return;
-
-    const selectedIndex = Array.from(list.children).indexOf(selected);
-    if (up && selectedIndex >= 3) {
-        document.querySelector(`.LiveStreamsListItem_live-streams-list-item__rALBj:nth-child(${selectedIndex})`).click();
-    } else if (!up && selectedIndex <= 10) {
-        document.querySelector(`.LiveStreamsListItem_live-streams-list-item__rALBj:nth-child(${selectedIndex + 2})`).click();
-    }
 }
 
 const fullScreenSvg = `
@@ -90,7 +76,6 @@ document.arrive(".Toast_close__BqOD6", function(controls) {
     document.querySelector('.Toast_close__BqOD6').click();
 });
 
-
 /*** Keyboard camera navigation (numbers + arrows) ***/
 document.addEventListener("keydown", function(event) {
     if (event.isComposing || document.activeElement?.selectionStart !== undefined || document.activeElement?.isContentEditable)
@@ -100,7 +85,9 @@ document.addEventListener("keydown", function(event) {
         document.querySelector(".LiveStreamsListItem_live-streams-list-item__rALBj:nth-child(12)").click();
     } else if (event.keyCode >= KeyCode.KEY_1 && event.keyCode <= KeyCode.KEY_9) {
         document.querySelector(`.LiveStreamsListItem_live-streams-list-item__rALBj:nth-child(${event.keyCode - 46})`).click();
-    } else if (event.keyCode === KeyCode.KEY_UP || event.keyCode === KeyCode.KEY_DOWN) {
-        moveStream(event.keyCode === KeyCode.KEY_UP);
+    } else if (event.keyCode === KeyCode.KEY_UP) {
+        document.querySelector(".LiveStreamsControls_prev-next__pbktS button")?.click();
+    } else if (event.keyCode === KeyCode.KEY_DOWN) {
+        document.querySelector(".LiveStreamsControls_prev-next__pbktS button:nth-child(2)")?.click();
     }
 });
