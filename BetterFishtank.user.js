@@ -85,6 +85,12 @@ document.arrive(".LiveStreamsControls_prev-next__pbktS", function(controls) {
     controls.appendChild(fullScreenBtn);
 });
 
+/*** Auto Dismiss Seasonpass Toast ***/
+document.arrive(".Toast_close__BqOD6", function(controls) {
+    document.querySelector('.Toast_close__BqOD6').click();
+});
+
+
 /*** Keyboard camera navigation (numbers + arrows) ***/
 document.addEventListener("keydown", function(event) {
     if (event.isComposing || document.activeElement?.selectionStart !== undefined || document.activeElement?.isContentEditable)
