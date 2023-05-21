@@ -87,8 +87,8 @@ document.arrive(".LiveStreamsCloudflarePlayer_live-streams-player__OCZ2v", funct
     overlay.style.position = 'absolute';
     overlay.style.top = '0';
     overlay.style.left = '0';
-    overlay.style.width = player.offsetWidth + 'px';
-    overlay.style.height = player.offsetHeight + 'px';
+    overlay.style.width = "inherit";
+    overlay.style.height = "inherit";
     overlay.style.zIndex = '9999';
     overlay.style.opacity = '0';
     overlay.tabIndex = '0'; // Make the overlay focusable
