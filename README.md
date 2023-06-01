@@ -1,3 +1,5 @@
+### Repository is archived for the time being now that Fishtank is over. Shoutout to all my fellow Josiecels out there (not the simps tho). We won.
+
 # BetterFishtank
 A userscript that makes fishtank.live suck less.
 [Download](https://github.com/BowDown097/BetterFishtank/raw/master/BetterFishtank.user.js)
