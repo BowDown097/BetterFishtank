@@ -1,4 +1,4 @@
-### Repository is archived for the time being now that Fishtank is over. Shoutout to all my fellow Josiecels out there (not the simps tho). We won.
+# Use [MAEJOK-TOOLS for Fishtank.live](https://github.com/maejok-xx/maejok-tools) which has a TON of features and I'd say is the spiritual successor to this script, with support for season 2.
 
 # BetterFishtank
 A userscript that makes fishtank.live suck less.
